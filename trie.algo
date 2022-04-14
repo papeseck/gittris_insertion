@@ -1,0 +1,15 @@
+PROCEDURE tris_insertion(T= ARRAY_OF_INTEGER[N])
+    VAR i, j , P : INTEGER
+    BEGIN
+        FOR i FROM 0 TO N-1 STEP 1 DO 
+            P = T[i]
+            j= i-1
+            WHILE(j>=1 && T[i]>P)DO
+                T[j+1] = T[j]
+                j=j-1
+             END_WHILE
+             T[j+1]=P
+        END_FOR
+    END
+
+ 
